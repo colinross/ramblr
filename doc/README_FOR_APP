@@ -1,0 +1,12 @@
+# Run "rake doc:app" to generate API documentation for your models, controllers, helpers, and libraries.
+This is a cornerstone app consisting of the following setup:
+
+   sqlite3 as main database store for active resource objects
+   Devise for Authentication; CanCan for Authorization
+   
+   Slim for views; formtastic for drop forms
+   Capistrano for deployment
+
+   Shoulda for tests; Rspec for additional testing and documentation, along with annotate-models
+
+   ruby-prof for profiling, ruby-debug for debuging
