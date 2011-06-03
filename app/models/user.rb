@@ -8,9 +8,10 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   has_one :profile, :dependent => :destroy
-  
-  def standardize_email!
-    self.email.lowercase!
+
+  before_validation(:on => :create) do
+    #standardize email
+      self.email.lowercase! if attribute_present?("email")
   end
   
 end
