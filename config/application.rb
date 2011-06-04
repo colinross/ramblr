@@ -49,6 +49,6 @@ module Cornerstone
     config.filter_parameters += [:password, :password_confirmation]
 
     # Enable the asset pipeline
-    config.assets.enabled = true;
+    config.assets.enabled = false;
   end
 end

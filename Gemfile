@@ -1,8 +1,8 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead:
-gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem "sprockets", :git => "git://github.com/sstephenson/sprockets.git"
+gem 'rails', :git => "git://github.com/rails/rails.git"
+
 # Asset template engines
 gem 'json'
 gem 'sass'
