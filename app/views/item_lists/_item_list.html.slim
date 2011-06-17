@@ -1,0 +1,6 @@
+tr
+  td= item_list.name
+  td= item_list.note
+  td= item_list.destination
+  td= link_to 'Edit', edit_item_list_path(item_list), :action => :edit
+  td= link_to 'Remove', item_list, :confirm => 'Are you sure?', :method => :delete

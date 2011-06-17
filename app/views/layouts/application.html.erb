@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Cornerstone</title>
+  <title>Ramblr</title>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js' %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1/jquery-ui.min.js' %>
+  <%= javascript_include_tag 'http://simplemodal.googlecode.com/files/jquery.simplemodal.1.4.1.min.js' %>
+  <%= stylesheet_link_tag 'http://yui.yahooapis.com/combo?3.3.0/build/cssreset/reset-min.css&3.3.0/build/cssfonts/fonts-min.css&3.3.0/build/cssgrids/grids-min.css' %>	 
+  <%= javascript_include_tag 'http://simplemodal.googlecode.com/files/jquery.simplemodal.1.4.1.min.js' %>
+  <%= stylesheet_link_tag 'application.css' %> 
   <%= javascript_include_tag 'application.js' %>
-  <%= stylesheet_link_tag 'application.css' %>
-
-
-  <%= csrf_meta_tags %>
+  <%= csrf_meta_tag %>
 </head>
 <body>
- 	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-	<%= yield %>
+	
+<header>
+  <h1>Ramblr :: <%= h(controller_name.capitalize)%></h1>
+  <nav class="user">
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. Not you?
+    <%= link_to "Sign out", destroy_user_session_path %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  <% end %>
+  </nav>
+</header>
+<div id="main" class="yui3-g">
+  <div class="yui3-u-1">
+  <%= yield %>
+  </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+  $(document).ready(function(){
+   // if request.headers['User-Agent'].scan('EVE-IGB')
+   requestTrust();	
+  });	
+</script>
 </body>
 </html>

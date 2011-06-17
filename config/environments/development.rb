@@ -1,4 +1,4 @@
-Cornerstone::Application.configure do
+Ramblr::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -24,6 +24,8 @@ Cornerstone::Application.configure do
 
   # devise depends on action mailer
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
+  Slim::Engine.set_default_options :pretty => true
   
   
 end

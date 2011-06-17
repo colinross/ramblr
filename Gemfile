@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead:
-gem 'rails', :git => "git://github.com/rails/rails.git"
+gem 'rails', :git => "git://github.com/rails/rails.git", :tag => 'v3.1.0.rc4'
 
 # Asset template engines
 gem 'json'
@@ -23,7 +23,6 @@ gem 'devise'
 gem 'formtastic'
 gem 'slim'
 
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -34,7 +33,14 @@ gem 'slim'
 #  gem 'webrat'
 #  gem 'ruby-prof'
    gem 'shoulda'
-   gem 'annotate-models'
-   gem 'rails-footnotes', '>= 3.7', :group => :development
+#   gem 'annotate-models'
+#   gem 'rails-footnotes', '>= 3.7'
  end
+
+# Heroku hacks
+ group :production do
+  gem 'therubyracer-heroku'
+  
+ end
+ 
 

@@ -1,6 +1,0 @@
-development:
-  locale: en
-test:
-  locale: en
-production:
-  locale: en

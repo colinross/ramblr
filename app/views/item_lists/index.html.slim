@@ -1,0 +1,19 @@
+h1 Listing item_lists
+
+table
+  tr
+    th
+    th
+    th
+    th
+
+  - @item_lists.each do |item_list|
+    tr
+      td= item_list
+      td= link_to 'Show', item_list
+      td= link_to 'Edit', edit_item_list_path(item_list)
+      td= link_to 'Destroy', item_list, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Item list', new_item_list_path

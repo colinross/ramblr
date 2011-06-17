@@ -1,0 +1,8 @@
+= semantic_form_for :item_list do |form|
+ = form.input  :name, :required => true
+ = form.input :list_type, :collection => ["Buy", "Manufacture"]
+ = form.input  :note
+ = form.input  :tag
+ = form.input  :destination
+ = form.input  :deadline_at
+ = form.buttons

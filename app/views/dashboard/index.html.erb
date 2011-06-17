@@ -1,0 +1,14 @@
+<% if @user.respond_to?(:ApiTokens)  %>
+	<h3>Current registered API tokens</h3>
+	<table>
+	<%= render @user.ApiTokens %>
+	</table>
+<% end %>
+
+<%= link_to "Add API Key", {:controller => :api_tokens, :action => :new} %><br />
+
+<table>
+<%= render @item_lists unless @item_lists.nil? %>
+</table>
+
+<%= link_to "New Item List", {:controller => :item_lists, :action => :new} %><br />

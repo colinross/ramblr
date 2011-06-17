@@ -5,7 +5,6 @@ class CreateProfiles < ActiveRecord::Migration
       t.string :first_name
       t.string :last_name
       t.string :display_name, :null => false
-      t.character :gender # null | M | F
       t.string :locale, :default => APP_CONFIG['locale'] #en, de, es
       
       t.timestamps

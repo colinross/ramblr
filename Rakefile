@@ -4,4 +4,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Cornerstone::Application.load_tasks
+Ramblr::Application.load_tasks

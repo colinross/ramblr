@@ -1,0 +1,22 @@
+/*
+ 
+*/
+body {
+  background-color: #333;
+  color: white;
+}
+a {
+  color: #eee;
+}
+nav.user {
+
+}
+body>header>hgroup>h1{
+	display: inline-block;
+}
+div#main {
+	clear:both;
+	margin: 2em auto;
+	padding: 1.5em ;
+	border: solid medium #666666;
+}

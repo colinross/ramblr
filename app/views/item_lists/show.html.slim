@@ -1,0 +1,17 @@
+p#notice= notice
+
+div#list_details
+  h3= @item_list.name
+  p.note= @item_list.note
+  p.destination= @item_list.destination
+  p.created_by= display_user(@item_list.created_by)
+
+div.list_items
+  div.add_item= link_to "Add Item", new_item_list_line_item_path(@item_list)
+
+
+p= debug @item_list
+
+= link_to 'Edit', edit_item_list_path(@item_list)
+| \|
+= link_to 'Back', item_lists_path

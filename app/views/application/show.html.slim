@@ -1,0 +1,21 @@
+p#notice= notice
+
+p
+  b Eveo user:
+  = @eve_api_key.eveo_user_id
+p
+  b Eveo api key:
+  = @eve_api_key.eveo_api_key
+p
+  b Last valid:
+  = @eve_api_key.last_valid
+p
+  b Api key scope:
+  = @eve_api_key.api_key_scope
+p
+  b Entered by:
+  = @eve_api_key.entered_by
+
+= link_to 'Edit', edit_eve_api_key_path(@eve_api_key)
+| \|
+= link_to 'Back', eve_api_keys_path
